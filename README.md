@@ -9,7 +9,7 @@ The module challenge is the afternoon project or assignment that students work t
 ## Objectives
 
 - Explain function scope
-- Describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript  
+- Describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript
 
 ## Introduction
 
@@ -17,7 +17,7 @@ This challenge focuses on both scope and closures.
 
 In this challenge you will be working to build a `scoreboard` (in the console) that takes randomly generated data and keeps track of a game's progress. If you're not familiar with the rules of baseball what you need to know is this: there are 9 innings and teams take turns "at-bat." Teams can only score while they are at bat. A team stops being at bat once they have gotten 3 `outs` by either striking out or through game play. You can read more about baseball rules [here](https://www.rulesofsport.com/sports/baseball.html).
 
-A scoreboard in a major league stadium looks something like this. In fact, the scoreboard at Fenway Park in Boston is actually quite famous. 
+A scoreboard in a major league stadium looks something like this. In fact, the scoreboard at Fenway Park in Boston is actually quite famous.
 
 ![Fenway Scoreboard](https://storage.googleapis.com/afs-prod/media/media:e959506330fd4e5890023c93cfbaac55/800.jpeg)
 
@@ -46,18 +46,17 @@ Edit the `ReadMe` file with your answers.
 2. Study the following code, then answer the questions below.
 
 ```js
-function personalDice(name){
-  return function(){
-      // generate random number between 1 and 6
+function personalDice(name) {
+  return function () {
+    // generate random number between 1 and 6
     const newRoll = Math.floor(Math.random() * 6);
-    console.log(`${name} rolled a ${newRoll}`)
-  }
+    console.log(`${name} rolled a ${newRoll}`);
+  };
 }
 
 const dansRoll = personalDice("Dan");
 
 const zoesRoll = personalDice("Zoe");
-
 
 dansRoll();
 dansRoll();
@@ -65,8 +64,7 @@ dansRoll();
 
 a. Where is closure used in this code? How can you tell?
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
-
+c. What is the lexical scope of `newRoll`?
 
 ### Task 3 - Stretch Goals
 
@@ -84,6 +82,13 @@ addSix(21); // returns 27
 
 2. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
 
+Functional programming ("FP") doesn't depend on state: a set of inputs always leads to the same outputs
+OOP depends on state so the same set of inputs can lead to different outputs depending on the state of the object
+
+FP: easier to create operations / manipulate data but harder to connect abstract concepts to reality - each function is a small engine doing its own thing so it is much easier to connect things in sequence / parallel but it is harder to see how these connections talk to reality
+
+OOP: easier to see how modeled elements translate to real life but creating complex data manipulation can be much harder because difficulty in understanding state implications can easily cause mistakes or make the code tough to understand
+
 ## Resources
 
 📚 [Scope and Closures Guide](https://css-tricks.com/javascript-scope-closures/)
@@ -92,4 +97,4 @@ addSix(21); // returns 27
 
 ## Submission Format
 
-Please see Canvas for cohort specific submission instructions 
+Please see Canvas for cohort specific submission instructions
