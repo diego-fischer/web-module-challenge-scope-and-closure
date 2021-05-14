@@ -43,7 +43,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
-2. Study the following code, then answer the questions below.
+   A function bundled with its lexical scope. In simple words: it is the combination of a function and the variables surrounding it, which can be accessible by the function.
+
+1. Study the following code, then answer the questions below.
 
 ```js
 function personalDice(name) {
@@ -63,8 +65,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+When the anonymous function returned by personalDice gets the variable name from personalDice. We can tell because name is not defined within the anonymous function but it is still accessible by it - after it is returned it will still access the name variable.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+Name doesn't change because it is defined in the function's surroundings. That said the random number always changes, leading to a new dice roll.
+
 c. What is the lexical scope of `newRoll`?
+Name. The reason is that newRoll will access name even if personalDice has returned.
 
 ### Task 3 - Stretch Goals
 
